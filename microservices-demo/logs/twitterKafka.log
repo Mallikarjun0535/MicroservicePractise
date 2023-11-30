@@ -1,0 +1,71 @@
+2023-12-01 01:12:25,739 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [main] Twitter Kafka Application Started ..........
+2023-12-01 01:12:27,209 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [restartedMain] Twitter Kafka Application Started ..........
+2023-12-01 01:12:29,215 INFO o.s.b.StartupInfoLogger [restartedMain] Starting TwitterToKafkaServiceApplication using Java 17.0.6 with PID 30684 (F:\MallikGithub\MicroservicePractise\microservices-demo\microservices-demo\twitter-to-kafka\target\classes started by Manasa Keerthi in F:\MallikGithub\MicroservicePractise\microservices-demo\microservices-demo)
+2023-12-01 01:12:29,218 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-01 01:12:30,494 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-01 01:12:30,494 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-01 01:12:37,987 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2023-12-01 01:12:38,008 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-01 01:12:38,014 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-01 01:12:38,015 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 01:12:38,198 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-01 01:12:38,201 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7704 ms
+2023-12-01 01:12:39,605 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-12-01 01:12:39,612 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-01 01:12:39,712 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-01 01:12:39,783 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path ''
+2023-12-01 01:12:39,861 INFO o.s.b.StartupInfoLogger [restartedMain] Started TwitterToKafkaServiceApplication in 12.572 seconds (process running for 21.409)
+2023-12-01 01:12:40,537 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [restartedMain] Twitter Kafka execution Started ..........
+2023-12-01 01:12:40,544 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-01 01:12:40,684 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:770)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.microservice.demo.twitter.to.kafka.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.List.toArray(Object[])" because the return value of "com.microservice.demo.twitter.to.kafka.config.TwitterToKafkaServiceConfigData.getTwitterKeywords()" is null
+	at com.microservice.demo.twitter.to.kafka.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:31)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:786)
+	... 19 common frames omitted
+2023-12-01 01:25:04,027 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [main] Twitter Kafka Application Started ..........
+2023-12-01 01:25:04,766 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [restartedMain] Twitter Kafka Application Started ..........
+2023-12-01 01:25:06,111 INFO o.s.b.StartupInfoLogger [restartedMain] Starting TwitterToKafkaServiceApplication using Java 17.0.6 with PID 17720 (F:\MallikGithub\MicroservicePractise\microservices-demo\microservices-demo\twitter-to-kafka\target\classes started by Manasa Keerthi in F:\MallikGithub\MicroservicePractise\microservices-demo\microservices-demo)
+2023-12-01 01:25:06,113 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-01 01:25:06,179 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-01 01:25:06,179 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-01 01:25:09,990 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2023-12-01 01:25:10,001 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-01 01:25:10,005 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-01 01:25:10,006 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 01:25:10,121 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-01 01:25:10,123 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3940 ms
+2023-12-01 01:25:11,142 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-12-01 01:25:11,152 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-01 01:25:11,219 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-01 01:25:11,273 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path ''
+2023-12-01 01:25:11,287 INFO o.s.b.StartupInfoLogger [restartedMain] Started TwitterToKafkaServiceApplication in 6.511 seconds (process running for 8.334)
+2023-12-01 01:25:11,445 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [restartedMain] Twitter Kafka execution Started ..........
+2023-12-01 01:25:11,445 INFO c.m.d.t.t.k.TwitterToKafkaServiceApplication [restartedMain] [-Java -Microservices -Kafka -Spring]
+2023-12-01 01:25:11,446 INFO c.m.d.t.t.k.r.MockKafkaStreamRunner [restartedMain] Starting mock filtering twitter stream for keywords [-Java -Microservices -Kafka -Spring]
+2023-12-01 01:25:11,723 INFO c.m.d.t.t.k.l.TwitterKafkaStatusListener [pool-2-thread-1] Received status text Fusce libero Fusce pulvinar magna massa consectetuer -Java -Microservices -Kafka -Spring malesuada dolor purus ipsum magna porttitor
+2023-12-01 01:25:21,735 INFO c.m.d.t.t.k.l.TwitterKafkaStatusListener [pool-2-thread-1] Received status text ipsum ultricies dolor Maecenas purus sit Fusce Maecenas -Java -Microservices -Kafka -Spring libero pulvinar lectus Lorem dolor amet dolor
+2023-12-01 01:25:31,748 INFO c.m.d.t.t.k.l.TwitterKafkaStatusListener [pool-2-thread-1] Received status text ipsum malesuada lectus ipsum -Java -Microservices -Kafka -Spring lectus pulvinar congue
+2023-12-01 01:25:41,757 INFO c.m.d.t.t.k.l.TwitterKafkaStatusListener [pool-2-thread-1] Received status text adipiscing magna Fusce Fusce sed porttitor adipiscing consectetuer -Java -Microservices -Kafka -Spring consectetuer dolor adipiscing adipiscing pulvinar libero
